@@ -11,14 +11,18 @@ package class3;
  */
 public class Pen {
     //Class attributes
-    String model;
-    String color;
-    float tip;
-    int charge;
-    boolean capped;
+    public String model;
+    public String color;
+    private float tip;
+    protected int charge;
+    private boolean capped;
     
     //Class methods
-    void scribble(){
+    public void write(){
+        
+    }
+    
+    public void scribble(){
         // Checks if the pen is capped
         // Because if it is, we can't scribble until we uncap it
         if(this.capped){
@@ -31,7 +35,11 @@ public class Pen {
         
     }
     
-    void cap(){
+    public void paint(){
+        
+    }
+    
+    public void cap(){
         // Checks if the pen is capped
         if(this.capped){
             // If it is:
@@ -42,7 +50,7 @@ public class Pen {
         }
     }
     
-    void uncap(){
+    public void uncap(){
         // Checks if the pen is capped
         if(this.capped){
             // If it is:
@@ -53,7 +61,7 @@ public class Pen {
         }
     }
     
-    void status(){
+    public void status(){
         // status method prints: 
         System.out.println("Model: " + this.model);
         System.out.println("A " + this.color + " Pen");

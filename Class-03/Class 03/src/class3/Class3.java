@@ -21,41 +21,29 @@ public class Class3 {
         // This creates the p1 Pen Object.
         Pen p1 = new Pen();
         
-        // Here we can access and modify its attributes:
+        // Here we try to change the p1 attributes:
+        p1.model = "BIC Cristal Up";
         p1.color = "Blue";
-        p1.tip = 0.5f;
-        p1.charge = 90;
         
-        // Here we call a method to change an attribute.
-        p1.cap();
+        // Here we have an error when trying to modify the attribute in the main class
+        // Because the attribute is private.
+        //p1.tip = 0.5f;
+        //p1.capped = false;
+        
+        // Here even being protected we can modify the attributes without error 
+        // Because the class is instantiated in our main method.
+        p1.charge = 75;
+        
         
         // Here we execute the object's status method.
         p1.status();
         
-        // Here we try to scribble, but the pen is capped and accuses error.
-        p1.scribble();
-        
-        // Here we uncap the pen and try to scribble again.
+        // Here we use the "cap" and "uncap" methods to change the "private capped" atributte.
+        // cap and uncap methods are public, but capped bool does not.
+        p1.cap();
         p1.uncap();
+        
         p1.scribble();
-        
-        // New instance of the new object of the class "Pen".
-        // This creates the p2 Pen Object. (That will not affect the p1)
-        Pen p2 = new Pen();
-        
-        // Here we can access and modify its attributes:
-        p2.model = "Student";
-        p2.color = "Black";
-        p2.tip = 0.7f;
-        p2.charge = 50;
-        
-        // Here we execute the object's status method.
-        p2.status();
-        
-        // Here we try to scribble:
-        p2.scribble();
-        
-        
     }
     
 }
