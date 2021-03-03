@@ -18,8 +18,10 @@ public class Pen {
     
     // This is the constructor method, it is executed once in the creation of the object.
     // In java it is created with the name of the class itself.
-    public Pen(){
-        this.setColor("Blue");
+    public Pen(String penModel, String penColor, float penTip){
+        this.setModel(penModel);
+        this.setColor(penColor);
+        this.setTip(penTip);
         this.cap();
     }
     
@@ -63,6 +65,7 @@ public class Pen {
     
     // Here we pass the getters methods internally to the status method.
     public void status(){
+        System.out.println("---------------------------");
         System.out.println("About the pen:");
         System.out.println("Model: " + this.getModel());
         System.out.println("Color: " + this.getColor());
