@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkgclass.pkg04;
+package class4;
 
 /**
  *
  * @author CaioHRombaldo
  */
-public class Class04 {
+public class Class4 {
 
     /**
      * @param args the command line arguments
