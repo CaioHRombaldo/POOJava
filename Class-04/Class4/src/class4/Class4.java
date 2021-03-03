@@ -23,15 +23,15 @@ public class Class4 {
         // As the attribute is model it is public, 
         // using the special method here we will obtain the same result as the direct access.
         // p1.model = "Bic Cristal Up";
-        p1.setModel("BIC Cristal UP");
+        // p1.setModel("BIC Cristal UP");
         
         // But here, as the tip attribute is private
         // we can only modify it using the modifier method.
         // p1.tip = 0.5f;
-        p1.setTip(0.5f);
+        // p1.setTip(0.5f);
         
         // Here we call the accessor methods (getters) to print de atributtes on terminal.
-        System.out.println("I have a " + p1.getModel() + " tip " + p1.getTip() + "pen.");
+        // System.out.println("I have a " + p1.getModel() + " tip " + p1.getTip() + "pen.");
         
         // Here we call status method to print de atributtes on terminal.
         p1.status();

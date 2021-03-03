@@ -12,7 +12,16 @@ package class4;
 public class Pen {
     
     public String model;
+    private String color;
     private float tip;
+    private boolean capped;
+    
+    // This is the constructor method, it is executed once in the creation of the object.
+    // In java it is created with the name of the class itself.
+    public Pen(){
+        this.setColor("Blue");
+        this.cap();
+    }
     
     // Here we define our special methods "setters" and "getters" 
     // that will return or modify the attributes of the Class.
@@ -24,6 +33,14 @@ public class Pen {
         this.model = penModel;
     }
     
+    public String getColor(){
+        return this.color;
+    }
+    
+    public void setColor(String penColor){
+        this.color = penColor;
+    }
+    
     public float getTip(){
         return this.tip;
     }
@@ -32,11 +49,25 @@ public class Pen {
         this.tip = penTip;
     }
     
+    public boolean getCapped(){
+        return this.capped;
+    }
+    
+    public void cap(){
+        this.capped = true;
+    }
+    
+    public void uncap(){
+        this.capped = false;
+    }
+    
     // Here we pass the getters methods internally to the status method.
     public void status(){
         System.out.println("About the pen:");
         System.out.println("Model: " + this.getModel());
+        System.out.println("Color: " + this.getColor());
         System.out.println("Tip: " + this.getTip());
+        System.out.println("Capped: " + this.getCapped());
     }
     
 }
