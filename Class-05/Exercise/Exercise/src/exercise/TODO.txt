@@ -1,0 +1,13 @@
+// When creating the account you need to ask the type:
+// The account type can accept only "CC" Checking Account, or "CP", Savings Account.
+// CC already starts with 50 reais, but CP already starts the account with 150 reais.
+// When opening the account, the status attribute must be true.
+
+// To close an account, you cannot have a balance or a debit.
+
+// To deposit in the account the status must be true.
+
+// To withdraw in the account the status must be true and need to have balance.
+
+// Each time the method is called, you need to charge the balance of the monthly fee.
+// Each customer who has "CC" will pay 12 reais in monthly fees, while "CP" customers will pay 20 reais.

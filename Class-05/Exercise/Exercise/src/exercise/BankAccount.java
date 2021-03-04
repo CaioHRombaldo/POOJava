@@ -12,11 +12,11 @@ package exercise;
 public class BankAccount {
     
     // Bank Account attributes:
-    int accNumber;
-    String accType;
-    String accOwner;
-    float accBalance;
-    boolean accStatus;
+    public int accNumber;
+    protected String accType;
+    private String accOwner;
+    private float accBalance;
+    private boolean accStatus;
     
     // Bank Account methods:
     public void createAccount(){
@@ -24,6 +24,18 @@ public class BankAccount {
     }
     
     public void closeAccount(){
+        
+    }
+    
+    public void deposit(){
+        
+    }
+    
+    public void withdraw(){
+        
+    }
+    
+    public void monthlyPayment(){
         
     }
     
