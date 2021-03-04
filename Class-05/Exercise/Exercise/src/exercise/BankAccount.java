@@ -15,11 +15,58 @@ public class BankAccount {
     public int accNumber;
     protected String accType;
     private String accOwner;
-    private float accBalance;
+    private double accBalance;
     private boolean accStatus;
     
+    // Bank Account Constructor method.
+    public BankAccount() {
+        this.setAccStatus(false);
+        this.setAccBalance(0.00);
+    }
+
+    // Bank Account attributes "setters" and "getters".
+    public int getAccNumber() {
+        return accNumber;
+    }
+
+    public void setAccNumber(int accNumber) {
+        this.accNumber = accNumber;
+    }
+
+    public String getAccType() {
+        return accType;
+    }
+
+    public void setAccType(String accType) {
+        this.accType = accType;
+    }
+
+    public String getAccOwner() {
+        return accOwner;
+    }
+
+    public void setAccOwner(String accOwner) {
+        this.accOwner = accOwner;
+    }
+
+    public double getAccBalance() {
+        return accBalance;
+    }
+
+    public void setAccBalance(double accBalance) {
+        this.accBalance = accBalance;
+    }
+
+    public boolean isAccStatus() {
+        return accStatus;
+    }
+
+    public void setAccStatus(boolean accStatus) {
+        this.accStatus = accStatus;
+    }
+    
     // Bank Account methods:
-    public void createAccount(){
+    public void openAccount(){
         
     }
     

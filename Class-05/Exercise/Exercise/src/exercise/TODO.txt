@@ -11,3 +11,5 @@
 
 // Each time the method is called, you need to charge the balance of the monthly fee.
 // Each customer who has "CC" will pay 12 reais in monthly fees, while "CP" customers will pay 20 reais.
+
+// Constructor method must start with balance 0 and false status
