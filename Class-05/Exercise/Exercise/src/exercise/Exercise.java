@@ -5,17 +5,28 @@
  */
 package exercise;
 
+import javax.swing.*;
 /**
  *
  * @author CaioHRombaldo
  */
 public class Exercise {
+    
+    String testeconsole;
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        MenuController mC = new MenuController(); 
+        
+        mC.menu();
+        
+    }
+    
+    public Exercise() {
+        
     }
     
 }
