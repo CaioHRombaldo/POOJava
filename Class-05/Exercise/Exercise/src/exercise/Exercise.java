@@ -33,19 +33,19 @@ public class Exercise {
                 
             }while(nameAccCurrent == null);
             
-            numAccCurrent = numAccCurrent + 1;
-            System.out.println(numAccCurrent);
             
             do{
             
-                int chooseVar = mC.menu();
+                int chooseVar = mC.menu(nameAccCurrent, numAccCurrent);
 
                 switch(chooseVar){
                 case 1:
                     String accType = mC.chooseAccType();
 
                     if(accType != null)
-                        bA.openAccount(accType);
+                        numAccCurrent = numAccCurrent + 1;
+                        System.out.println("Numero da conta: " + numAccCurrent);
+                        bA.openAccount(numAccCurrent, nameAccCurrent, accType);
                     break;
 
                 case 2:

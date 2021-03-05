@@ -13,15 +13,18 @@ import javax.swing.JOptionPane;
  */
 public class MenuController {
     
-    public int menu(){
-        int chooseVar = Integer.parseInt(showMenu());
+    public int menu(String nameAccCurrent, int numAccCurrent){
+        int chooseVar = Integer.parseInt(showMenu(nameAccCurrent, numAccCurrent));
         System.out.println(chooseVar);
         
         return chooseVar;
     }
     
-    public String showMenu(){
-        String menuText = "----CENTRAL-BANK----\n[1] Open Account\n[2] Close Account\n[3] Manage Account\n[4] Exit";
+    public String showMenu(String nameAccCurrent, int numAccCurrent){
+        String menuText = "----CENTRAL-BANK----\n" +
+                "Hi " + nameAccCurrent + " what you want?\n" +
+                "[1] Open Account\n[2] Close Account\n[3] Manage Account\n[4] Exit\n" +
+                " Account Number: " + numAccCurrent;
         showConsoleMenu();
         return JOptionPane.showInputDialog(null, menuText);
     };

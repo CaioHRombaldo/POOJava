@@ -58,7 +58,7 @@ public class BankAccount {
         this.accBalance = accBalance;
     }
 
-    public boolean isAccStatus() {
+    public boolean getAccStatus() {
         return accStatus;
     }
 
@@ -67,18 +67,39 @@ public class BankAccount {
     }
     
     // Bank Account methods:
-    public void openAccount(String accType){
-        System.out.println(accType);
-        this.setAccBalance(this.openingBalance(accType));
+    public void openAccount(int numAccCurrent, String nameAccCurrent,String accType){
+        this.setAccNumber(numAccCurrent);
+        this.setAccOwner(nameAccCurrent);
+        this.setAccType(accType);
+        
+        System.out.println("Account Number: " + this.getAccNumber());
+        System.out.println("Account Owner: " + this.getAccOwner());
+        System.out.println("Account Type: " + this.getAccType());
+        
+        if(this.getAccNumber()!= 0 && this.getAccOwner() != null && this.getAccType() != null && this.getAccStatus() == false){
+            this.setAccStatus(true);
+        }
+        
+        // System.out.println(this.getAccStatus());
+        
+        this.deposit(this.openingBalance(accType));
+        
         System.out.println(this.getAccBalance());
     }
     
     public void closeAccount(){
-        
+        if(this.getAccBalance() != 0.00){
+            System.out.println("ERROR account balance isn't equal to 0.");
+        }
+        else{
+            this.setAccStatus(false);
+        }
     }
     
-    public void deposit(){
-        
+    public void deposit(double amount){
+        if(this.getAccStatus() == true){
+            this.setAccBalance(accBalance + amount);
+        }
     }
     
     public void withdraw(){
@@ -94,6 +115,14 @@ public class BankAccount {
             return 150.00;
         }
         return 50.00;
+    }
+    
+    public void showAccountStatus(){
+        System.out.println("Account Number: " + this.getAccNumber());
+        System.out.println("Account Owner: " + this.getAccOwner());
+        System.out.println("Account Type: " + this.getAccType());
+        System.out.println("Account Balance: " + this.getAccBalance());
+        System.out.println("Account Status: " + this.getAccStatus());
     }
     
 }
