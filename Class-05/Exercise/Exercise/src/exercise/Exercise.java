@@ -5,28 +5,72 @@
  */
 package exercise;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author CaioHRombaldo
  */
 public class Exercise {
     
-    String testeconsole;
-
+     public static boolean exitSignal = false;
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        MenuController mC = new MenuController(); 
+            int numAccCurrent = 0;
+            String nameAccCurrent = null;
         
-        mC.menu();
+            MenuController mC = new MenuController();
+            BankAccount bA = new BankAccount();
+            
+            do{
+                
+                nameAccCurrent = mC.chooseNameAccCurrent();
+                System.out.println(nameAccCurrent);
+                
+            }while(nameAccCurrent == null);
+            
+            numAccCurrent = numAccCurrent + 1;
+            System.out.println(numAccCurrent);
+            
+            do{
+            
+                int chooseVar = mC.menu();
+
+                switch(chooseVar){
+                case 1:
+                    String accType = mC.chooseAccType();
+
+                    if(accType != null)
+                        bA.openAccount(accType);
+                    break;
+
+                case 2:
+                    bA.closeAccount();
+                    break;
+
+                case 3:
+                    mC.manageAccount(); 
+                    break;
+
+                case 4:
+                    setExitSignal(true);
+                    // System.out.println("EXIT");
+                    break;
+
+                default:
+                    mC.invalidOption();
+                }
+        
+            }while(exitSignal == false);
         
     }
-    
-    public Exercise() {
-        
+
+    public static void setExitSignal(boolean exitSignal) {
+        Exercise.exitSignal = exitSignal;
     }
     
 }

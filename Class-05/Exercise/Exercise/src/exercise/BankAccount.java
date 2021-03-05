@@ -22,6 +22,7 @@ public class BankAccount {
     public BankAccount() {
         this.setAccStatus(false);
         this.setAccBalance(0.00);
+        // openAccount(this.accTypeSelect);
     }
 
     // Bank Account attributes "setters" and "getters".
@@ -66,8 +67,10 @@ public class BankAccount {
     }
     
     // Bank Account methods:
-    public void openAccount(){
-        
+    public void openAccount(String accType){
+        System.out.println(accType);
+        this.setAccBalance(this.openingBalance(accType));
+        System.out.println(this.getAccBalance());
     }
     
     public void closeAccount(){
@@ -84,6 +87,13 @@ public class BankAccount {
     
     public void monthlyPayment(){
         
+    }
+    
+    public double openingBalance(String accType){
+        if(accType.equals("CP")){
+            return 150.00;
+        }
+        return 50.00;
     }
     
 }

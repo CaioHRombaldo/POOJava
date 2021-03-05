@@ -13,25 +13,11 @@ import javax.swing.JOptionPane;
  */
 public class MenuController {
     
-    public void menu(){
+    public int menu(){
         int chooseVar = Integer.parseInt(showMenu());
         System.out.println(chooseVar);
         
-        switch(chooseVar){
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            default:
-                JOptionPane.showMessageDialog(null, "Invalid Option!\nTry Again.", "ERROR: Invalid", JOptionPane.ERROR_MESSAGE);
-                menu();
-        }
-        
-        
+        return chooseVar;
     }
     
     public String showMenu(){
@@ -48,6 +34,30 @@ public class MenuController {
         System.out.println("[3] Manage Account");
         System.out.println("[4] Exit");
         System.out.println("--------------------");
+    }
+    
+    public String chooseNameAccCurrent(){
+        return JOptionPane.showInputDialog(null, "Please, type your name:");
+    }
+    
+    public String chooseAccType(){
+        String accTypeText = "CC = Conta Corrente\nCP = Conta Poupança";
+        
+        String accTypeTester = JOptionPane.showInputDialog(null, accTypeText);
+        
+        if(accTypeTester.equals("CC") || accTypeTester.equals("CP")){
+            return accTypeTester;   
+        }
+        
+        return null;
+    }
+    
+    public void manageAccount(){
+        
+    }
+    
+    public void invalidOption(){
+        JOptionPane.showMessageDialog(null, "Invalid Option!\nTry Again.", "ERROR: Invalid", JOptionPane.ERROR_MESSAGE);
     }
     
     
