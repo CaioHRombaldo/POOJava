@@ -67,22 +67,38 @@ public class BankAccount {
     
     public void monthlyPayment(){
         // Local variable that will keep the monthly fee after the account type test.
-        int mPAmount;
+        int mPAmount = 0;
         
         if (this.getAccType().equals("CC")) {
             mPAmount = 12;
         } else if (this.getAccType().equals("CP")) {
             mPAmount = 20;
         }
+        // Here we collect payment
+        this.withdraw(mPAmount);
+    }
+    
+    public void accStatus(){
+        // This method will show us the current account status on the console.
+        System.out.println("----------------------------------------");
+        System.out.println("Account number:" + this.getAccNumber());
+        System.out.println("Account type:" + this.getAccType());
+        System.out.println("Account owner:" + this.getAccOwner());
+        System.out.println("Account balance:" + this.getAccBalance());
+        System.out.println("Account status:" + this.getAccStatus());
     }
     
     
     // Special method Constructor:
-    public BankAccount() {
+    public BankAccount(int num, String name) {
         // Here we define some parameters for the initialization of the account. 
         // (closed and without balance)
         this.setAccStatus(false);
         this.setAccBalance(0);
+        
+        // Here we define the account number and name based on the parameter received when instantiating the object.
+        this.setAccNumber(num);
+        this.setAccOwner(name);
         
     }
     

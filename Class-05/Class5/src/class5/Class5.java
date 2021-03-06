@@ -16,6 +16,30 @@ public class Class5 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        // Here, we instantiate a new account using the account number and name as a parameter.
+        BankAccount c1 = new BankAccount(123, "Jubileu");
+        BankAccount c2 = new BankAccount(321, "Creuza");
+        
+        // Here we open the account by passing the account type as a parameter.
+        c1.openAccount("CC");
+        c2.openAccount("CP");
+        
+        // Here we tested some custom methods that we created in the bank class:
+        // c1.deposit(100);
+        // c1.closeAccount();
+        // c1.withdraw(150);
+        //c1.closeAccount();
+        
+        //c1.monthlyPayment();
+        //c2.monthlyPayment();
+        
+        // Here we show the current status of the attributes on the console.
+        c1.accStatus();
+        c2.accStatus();
+        
+        
+        
     }
     
 }
