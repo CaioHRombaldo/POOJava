@@ -16,6 +16,26 @@ public class Class6 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        RemoteControl rC = new RemoteControl();
+        // Here we can test our RemoteControl Class using the Controller interface.
+        
+        rC.turnOn();
+        
+        //rC.muteOn();
+        //rC.muteOff();
+        
+        //rC.play();
+        //rC.pause();
+        
+        //rC.raiseVolume();
+        //rC.raiseVolume();
+        
+        //rC.lowerVolume();
+        //rC.lowerVolume();
+        
+        rC.openMenu();
+        rC.closeMenu();
     }
     
 }

@@ -19,7 +19,7 @@ public class RemoteControl implements Controller {
     
     
     // Special methods "Constructor", "Setters" and "Getters".
-    private RemoteControl() {
+    public RemoteControl() {
         this.volume = 50;
         this.playing = false;
         this.on = false;
@@ -66,16 +66,17 @@ public class RemoteControl implements Controller {
     @Override
     public void openMenu() {
         // Here we show the object information on the console.
+        System.out.println("--------MENU--------");
         System.out.println("It's on? " + this.getOn());
         System.out.println("It's playing? " + this.getPlaying());
         System.out.println("Volume: " + this.getVolume() + "%");
         
         // Here we run a loop to show the volume in bars.
-        System.out.print("[");
-        for(int i = 0; i <= this.getVolume(); i += 10){
+        System.out.print("Vol: [");
+        for(int i = 0; i < this.getVolume(); i += 10){
             System.out.print("|");
         }
-        System.out.print("]");
+        System.out.println("]");
     }
 
     @Override
