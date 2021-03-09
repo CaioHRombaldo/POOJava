@@ -18,17 +18,16 @@ public class Fighter {
     private float height;
     private float weight;
     private String category;
-    private int victories;
-    private int defeats;
-    private int ties;
+    private int victories, defeats, ties;
 
     // Fighetr Special methods.
     // Here we will not ask for the category parameter, because when passing the weight it will already define the category.
-    public Fighter(String name, int age, float height, float weight, int victories, int defeats, int ties) {
+    public Fighter(String name, String nacionality, int age, float height, float weight, int victories, int defeats, int ties) {
         this.name = name;
+        this.nacionality = nacionality;
         this.age = age;
         this.height = height;
-        this.weight = weight;
+        this.setWeight(weight);
         this.victories = victories;
         this.defeats = defeats;
         this.ties = ties;
@@ -122,10 +121,11 @@ public class Fighter {
     
     // Custom methods.
     public void introduceFighter(){
+        System.out.println("-----------------------------");
         System.out.println("Fighter: " + this.getName());
         System.out.println("From: " + this.getNacionality());
-        System.out.println(this.getAge() + "years old");
-        System.out.println(this.getHeight() + "meters tall");
+        System.out.println(this.getAge() + " years old");
+        System.out.println(this.getHeight() + " meters tall");
         System.out.println("wighing " + this.getWeight() + "Kg");
         System.out.println("Has won " + this.getVictories() + " fights");
         System.out.println("It lost " + this.getDefeats() + " fights");
@@ -133,6 +133,7 @@ public class Fighter {
     }
     
     public void status(){
+        System.out.println("--------------");
         System.out.println(this.getName());
         System.out.println("It's a " + this.getCategory());
         System.out.println("Victories: " + this.getVictories());
