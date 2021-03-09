@@ -19,33 +19,33 @@ public class RemoteControl implements Controller {
     
     
     // Special methods "Constructor", "Setters" and "Getters".
-    public RemoteControl() {
+    private RemoteControl() {
         this.volume = 50;
         this.playing = false;
         this.on = false;
     }
 
-    public int getVolume() {
+    private int getVolume() {
         return volume;
     }
 
-    public void setVolume(int volume) {
+    private void setVolume(int volume) {
         this.volume = volume;
     }
 
-    public boolean getPlaying() {
+    private boolean getPlaying() {
         return playing;
     }
 
-    public void setPlaying(boolean playing) {
+    private void setPlaying(boolean playing) {
         this.playing = playing;
     }
 
-    public boolean getOn() {
+    private boolean getOn() {
         return on;
     }
 
-    public void setOn(boolean on) {
+    private void setOn(boolean on) {
         this.on = on;
     }
     
