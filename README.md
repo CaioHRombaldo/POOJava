@@ -10,6 +10,7 @@
   Class 04 - "Special Methods": | Here we learn to use the **Constructor** method and the **Getters** and **Setters**.
   Class 05 - "Practical exercise" | Here we do a practical exercise before and after class, **"Bank account management system"**.
   Class 06 - "Encapsulation" | Here we learn about **encapsulation** and how to use **interfaces**.
+  Class 07 - "Ultra Emoji Combat" | Here we will start the **relationship between the classes** and use a composition object.
 
 
  
