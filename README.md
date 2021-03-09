@@ -9,6 +9,7 @@
   Class 03 - "Visibility": | Here we learn about visibility of attributes and methods.
   Class 04 - "Special Methods": | Here we learn to use the **Constructor** method and the **Getters** and **Setters**.
   Class 05 - "Practical exercise" | Here we do a practical exercise before and after class, **"Bank account management system"**.
+  Class 06 - "Encapsulation" | Here we learn about **encapsulation** and how to use **interfaces**.
 
 
  
