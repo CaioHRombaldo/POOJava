@@ -33,8 +33,8 @@ public class Fight {
             this.setChallenged(cd);
             this.setApproved(true);
             
-            System.out.println("Fight between " + this.getChallenger() +
-                    " and " + this.getChallenged() + " approved !!!");
+            System.out.println("Fight between " + this.getChallenger().getName() +
+                    " and " + this.getChallenged().getName() + " approved !!!");
             
         } else {
             
@@ -51,43 +51,60 @@ public class Fight {
     public void startFight(){
         // Here we check if the fight was approved.
         if(this.getApproved()){
+            this.getChallenger().introduceFighter();
+            this.getChallenged().introduceFighter();
             
             // Here we will generate a random number from 0 to 2 
             // to define the result of the fight.
             Random rand = new Random();
-            int result = rand.nextInt(2);
+            int result = rand.nextInt(3);
             // Print rand result for debbug.
-            System.out.println(result);
+            // System.out.println(result);
+
             
             switch(result){
                 case 0:
                     this.getChallenger().tieFight();
                     this.getChallenged().tieFight();
-                    System.out.println("------Result------");
-                    System.out.println("-------TIE!-------");
                     break;
                 case 1:
                     this.getChallenger().winFight();
                     this.getChallenged().loseFight();
-                    System.out.println("------Result------");
-                    System.out.println("-CHALLENGER--WIN!-");
-                    System.out.println(this.getChallenger().getName());
                     break;
                 case 2:
                     this.getChallenger().loseFight();
                     this.getChallenged().winFight();
-                    System.out.println("------Result------");
-                    System.out.println("-CHALLENGED--WIN!-");
-                    System.out.println(this.getChallenged().getName());
                     break;
                 default:
                     System.out.println("ERROR! Invalid fight result! try again!");
             }
             
+            // Calls the method that shows the result on the console.
+            this.resultPrint(result);
+            
         } else{
             
             System.out.println("Error! The fight cannot start because it is not approved!");
         
+        }
+        
+    }
+    
+    // For a better organization, this method shows the winner on the console.
+    private void resultPrint(int result){
+        System.out.println("--------Result--------");
+        switch(result){
+            case 0:
+                System.out.println("-------TIE!-------");
+                break;
+            case 1:
+                System.out.println("-CHALLENGER--WIN!-");
+                System.out.println(this.getChallenger().getName());
+                break;
+            case 2:
+                System.out.println("-CHALLENGED--WIN!-");
+                System.out.println(this.getChallenged().getName());
+                break;
         }
         
     }

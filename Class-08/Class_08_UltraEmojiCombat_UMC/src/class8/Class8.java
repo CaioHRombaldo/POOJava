@@ -38,6 +38,17 @@ public class Class8 {
         //}
         
         
+        // Here we will instantiate a new fight.
+        // Ultimate Emoji Combat
+        Fight UEC01 = new Fight();
+        
+        // Here we will schedule a new fight,
+        // passing the challenger and the challenged as parameters.
+        UEC01.scheduleFight(f[0], f[1]);
+        
+        //H ere we will try to start the fight.
+        UEC01.startFight();
+        
     }
     
 }
