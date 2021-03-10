@@ -11,6 +11,7 @@
   Class 05 - "Practical exercise" | Here we do a practical exercise before and after class, **"Bank account management system"**.
   Class 06 - "Encapsulation" | Here we learn about **encapsulation** and how to use **interfaces**.
   Class 07 - "Ultra Emoji Combat" | Here we will start the **relationship between the classes** and use a composition object.
+  Class 08 - "Aggregation Relationship": | Here we finish the **UEC** (started in class 07) and learn more about the relationship between classes **(Aggregation)**.
 
 
  
