@@ -27,7 +27,7 @@ public class Fight {
     // cr = challenger // cd = challenged
     public void scheduleFight(Fighter cr, Fighter cd){
         // Here we do some checks before marking the fight as approved.
-        if (cr.getCategory() == cd.getCategory() && cr != cd) {
+        if (cr.getCategory().equals(cd.getCategory()) && cr != cd) {
             
             this.setChallenger(cr);
             this.setChallenged(cd);
@@ -51,13 +51,17 @@ public class Fight {
     public void startFight(){
         // Here we check if the fight was approved.
         if(this.getApproved()){
+            System.out.println("### CHALLENGER ###");
             this.getChallenger().introduceFighter();
+            System.out.println("### CHALLENGED ###");
             this.getChallenged().introduceFighter();
             
             // Here we will generate a random number from 0 to 2 
             // to define the result of the fight.
+            // We will use the "Random" class of the java itself for this.
             Random rand = new Random();
-            int result = rand.nextInt(3);
+            int result = rand.nextInt(3); // 0 1 2
+            
             // Print rand result for debbug.
             // System.out.println(result);
 
@@ -92,20 +96,23 @@ public class Fight {
     
     // For a better organization, this method shows the winner on the console.
     private void resultPrint(int result){
-        System.out.println("--------Result--------");
+        System.out.println("-======-Result-======-");
+        
         switch(result){
             case 0:
-                System.out.println("-------TIE!-------");
+                System.out.println("|--------TIE!--------|");
                 break;
             case 1:
-                System.out.println("-CHALLENGER--WIN!-");
-                System.out.println(this.getChallenger().getName());
+                System.out.println("|--CHALLENGER--WIN!--|");
+                System.out.println("  " + this.getChallenger().getName());
                 break;
             case 2:
-                System.out.println("-CHALLENGED--WIN!-");
-                System.out.println(this.getChallenged().getName());
+                System.out.println("|--CHALLENGED--WIN!--|");
+                System.out.println("  " + this.getChallenged().getName());
                 break;
         }
+        
+        System.out.println("-====================-");
         
     }
     

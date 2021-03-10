@@ -129,7 +129,7 @@ public class Fighter {
         System.out.println("wighing " + this.getWeight() + "Kg");
         System.out.println("Has won " + this.getVictories() + " fights");
         System.out.println("It lost " + this.getDefeats() + " fights");
-        System.out.println("Tied " + this.getTies() + "fights");
+        System.out.println("Tied " + this.getTies() + " fights");
     }
     
     public void status(){
