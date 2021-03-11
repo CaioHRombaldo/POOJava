@@ -8,7 +8,7 @@
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
 <project name="Class_08_UltraEmojiCombat_UMC" default="default" basedir=".">
-    <description>Builds, tests, and runs the project Class_08_UltraEmojiCombat_UMC.</description>
+    <description>Builds, tests, and runs the project Class 08 UltraEmojiCombat_UMC.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
