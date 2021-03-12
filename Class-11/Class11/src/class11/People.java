@@ -10,7 +10,9 @@ package class11;
  * @author CaioHRombaldo
  */
 // Here we will create our root class:
-public class People {
+// This class is abstract so it cannot be instantiated as an object,
+// but your children can.
+public abstract class People {
     
     // People attributes:
     private String name;
@@ -19,8 +21,14 @@ public class People {
     
     
     // People custom methods:
-    public void makeBirthday(){
+    // This method cannot be changed by the children or descendants of that class.
+    public final void makeBirthday(){
         this.setAge(this.getAge() + 1);
+    }
+
+    @Override
+    public String toString() {
+        return "People{" + "name=" + name + ", age=" + age + ", gender=" + gender + '}';
     }
     
     

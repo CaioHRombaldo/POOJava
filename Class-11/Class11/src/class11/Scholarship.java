@@ -9,7 +9,7 @@ package class11;
  *
  * @author CaioHRombaldo
  */
-public class Scholarship extends Student {
+public final class Scholarship extends Student {
     
     // Scholarship attributes:
     private int scholarship;
@@ -17,8 +17,9 @@ public class Scholarship extends Student {
     
     // Scholharship custom methods:
     public void renewScholarship(){
-        
+        System.out.println("Renewing scholarship!");
     }
+    
     // Here we override a method of our mother class.
     @Override
     public void payMonthlyFee(){
