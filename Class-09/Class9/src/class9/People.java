@@ -19,11 +19,17 @@ public class People {
     
     // People custom methods:
     public void makeBirthday(){
-        
+        this.age = this.age ++;
     }
     
     
     // People special methods:
+    public People(String name, int age, String gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+
     public String getName() {
         return name;
     }

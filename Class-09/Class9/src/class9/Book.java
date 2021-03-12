@@ -9,7 +9,7 @@ package class9;
  *
  * @author CaioHRombaldo
  */
-public class Book {
+public class Book implements BookInterface {
     
     // Book attributes:
     private String title;
@@ -23,12 +23,79 @@ public class Book {
     
     
     // Book custom methods:
-    public void details(){
+    public String details(){
+        return "Book{\n" + "title=" + title + 
+                ",\n author=" + author + 
+                ",\n totPages=" + totPages + 
+                ",\n curPage=" + curPage + 
+                ",\n open=" + open + 
+                ",\n reader=" + reader.getName() + "\n" +'}';
         
     }
     
     
+    // Book abstract methods:
+    @Override
+    public void open() {
+        if (!this.getOpen())
+        this.setOpen(true);
+    }
+
+    @Override
+    public void close() {
+        if (this.getOpen())
+        this.setOpen(false);
+    }
+
+    @Override
+    public void flipThrough(int until) {
+        if(this.getOpen()) {
+            if (until > this.getTotPages()) {
+                this.setCurPage(this.getTotPages());
+            } else if (until < 0) {
+                this.setCurPage(0);
+            } else {
+                this.setCurPage(until);   
+            }
+        } else {
+            System.out.println("ERROR! First open the book!");
+        }
+    }
+
+    @Override
+    public void nextPage() {
+        if(this.getOpen()) {
+            if ((this.getCurPage() + 1) > this.getTotPages()) {
+                System.out.println("ERROR! No more pages!");
+            } else {
+                this.setCurPage(this.getCurPage() + 1);
+            }
+        } else {
+            System.out.println("ERROR! First open the book!");
+        }
+    }
+
+    @Override
+    public void backPage() {
+        if(this.getOpen()) {
+            if ((this.getCurPage() - 1) < 0) {
+                System.out.println("ERROR! No more pages!");
+            } else {
+                this.setCurPage(this.getCurPage() - 1);
+            }
+        }
+    }
+    
+    
     // Book special methods:
+    public Book(String title, String author, int totPages, People reader) {
+        this.title = title;
+        this.author = author;
+        this.totPages = totPages;
+        this.curPage = 0;
+        this.open = false;
+        this.reader = reader;
+    }
 
     public String getTitle() {
         return title;
