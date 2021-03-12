@@ -13,6 +13,6 @@
   Class 07 - "Ultra Emoji Combat" | Here we will start the **relationship between the classes** and use a composition object.
   Class 08 - "Aggregation Relationship": | Here we finish the **UEC** (started in class 07) and learn more about the relationship between classes **(Aggregation)**.
   Class 09 - "Practical exercise" | In this class we did a practical exercise to train the concepts that we have learned so far.
-
+  Class 10 - "Inheritances" | In this class we learned concepts about **inheritances**.
 
  
