@@ -67,8 +67,8 @@ public class Dog extends Wolf {
     
     
     // Dog special methods:
-    public Dog(float weight, int age, int limbs) {
-        super(weight, age, limbs);
-    }
+    //public Dog(float weight, int age, int limbs) {
+    //    super(weight, age, limbs);
+    //}
     
 }

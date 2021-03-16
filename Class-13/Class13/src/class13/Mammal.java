@@ -23,9 +23,9 @@ public class Mammal extends Animal{
         
     
     // Mammal special methods:
-    public Mammal(float weight, int age, int limbs) {
-        super(weight, age, limbs);
-    }
+    //public Mammal(float weight, int age, int limbs) {
+    //    super(weight, age, limbs);
+    //}
 
     public String getHairColor() {
         return hairColor;

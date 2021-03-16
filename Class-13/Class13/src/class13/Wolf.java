@@ -19,8 +19,8 @@ public class Wolf extends Mammal {
     
     
     // Wolf Special methods:
-    public Wolf(float weight, int age, int limbs) {
-        super(weight, age, limbs);
-    }
+    //public Wolf(float weight, int age, int limbs) {
+    //    super(weight, age, limbs);
+    //}
     
 }

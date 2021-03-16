@@ -22,11 +22,11 @@ public abstract class Animal {
     
     
     // Animal special methods:
-    public Animal(float weight, int age, int limbs) {
-        this.weight = weight;
-        this.age = age;
-        this.limbs = limbs;
-    }
+    //public Animal(float weight, int age, int limbs) {
+    //    this.weight = weight;
+    //    this.age = age;
+    //    this.limbs = limbs;
+    //}
 
     public float getWeight() {
         return weight;
