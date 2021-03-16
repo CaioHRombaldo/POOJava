@@ -15,5 +15,6 @@
   Class 09 - "Practical exercise" | In this class we did a practical exercise to train the concepts that we have learned so far.
   Class 10 - "Inheritances part 1" | In this class we learned concepts about **inheritances**.
   Class 11 - "Inheritances part 2" | In this class we learn a little more about inheritances and their types.
+  Class 12 - "Polymorphism part 1" | In this class we learned concepts about **polymorphism**.
 
  
