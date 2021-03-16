@@ -14,7 +14,8 @@
   Class 08 - "Aggregation Relationship": | Here we finish the **UEC** (started in class 07) and learn more about the relationship between classes **(Aggregation)**.
   Class 09 - "Practical exercise" | In this class we did a practical exercise to train the concepts that we have learned so far.
   Class 10 - "Inheritances part 1" | In this class we learned concepts about **inheritances**.
-  Class 11 - "Inheritances part 2" | In this class we learn a little more about inheritances and their types.
-  Class 12 - "Polymorphism part 1" | In this class we learned concepts about **polymorphism**.
+  Class 11 - "Inheritances part 2" | In this class we learn a little more about **inheritances** and their types.
+  Class 12 - "Polymorphism part 1" | In this class we learned concepts about **polymorphism** (**Override**). 
+  Class 13 - "Polymorphism part 2" | In this class we learn a little more about **polymorphism** (**Overload**).
 
  
