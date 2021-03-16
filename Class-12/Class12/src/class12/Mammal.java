@@ -11,8 +11,11 @@ package class12;
  */
 public class Mammal extends Animal {
 
+    //Mammal attributes:
     private String hairColor;
     
+    
+    // Mammal Override methods:
     @Override
     void move() {
         System.out.println("Running!");
@@ -26,6 +29,20 @@ public class Mammal extends Animal {
     @Override
     void sound() {
         System.out.println("Mammal Sound!");
+    }
+    
+    
+    // Mammal special methods:
+    public Mammal(float weight, int age, int limbs) {
+        super(weight, age, limbs);
+    }
+
+    public String getHairColor() {
+        return hairColor;
+    }
+
+    public void setHairColor(String hairColor) {
+        this.hairColor = hairColor;
     }
     
 }

@@ -27,7 +27,36 @@ public abstract class Animal {
     abstract void sound();
     
     
-    // Animal special methods:
+    // Animal special methods:    
+    public Animal(float weight, int age, int limbs) {
+        this.weight = weight;
+        this.age = age;
+        this.limbs = limbs;
+    }
+
+    public float getWeight() {
+        return weight;
+    }
+
+    public void setWeight(float weight) {
+        this.weight = weight;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getLimbs() {
+        return limbs;
+    }
+
+    public void setLimbs(int limbs) {
+        this.limbs = limbs;
+    }
     
     
 }

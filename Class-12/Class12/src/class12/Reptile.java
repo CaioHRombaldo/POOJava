@@ -11,8 +11,11 @@ package class12;
  */
 public class Reptile extends Animal {
     
+    // Reptile attributes:
     private String scaleColor;
+
     
+    // Reptile Override methods: 
     @Override
     void move() {
         System.out.println("Crawling!");
@@ -26,6 +29,20 @@ public class Reptile extends Animal {
     @Override
     void sound() {
         System.out.println("Reptile Sound!");
+    }
+    
+    
+    // Reptile special methods:
+    public Reptile(float weight, int age, int limbs) {
+        super(weight, age, limbs);
+    }
+
+    public String getScaleColor() {
+        return scaleColor;
+    }
+
+    public void setScaleColor(String scaleColor) {
+        this.scaleColor = scaleColor;
     }
     
 }

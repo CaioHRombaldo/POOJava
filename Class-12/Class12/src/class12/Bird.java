@@ -11,8 +11,15 @@ package class12;
  */
 public class Bird extends Animal {
 
+    // Bird attributes:
     private String featherColor;
+
+    // Bird custom methods:
+    public void makeNest(){
+        System.out.println("Built a nest!");
+    }
     
+    // Bird Override methods:
     @Override
     void move() {
         System.out.println("Flying!");
@@ -28,9 +35,18 @@ public class Bird extends Animal {
         System.out.println("Bird Sound!");
     }
     
-    public void makeNest(){
-        System.out.println("Built a nest!");
-    }
     
+    // Bird special methods:
+    public Bird(float weight, int age, int limbs) {
+        super(weight, age, limbs);
+    }
+
+    public String getFeatherColor() {
+        return featherColor;
+    }
+
+    public void setFeatherColor(String featherColor) {
+        this.featherColor = featherColor;
+    }
     
 }
