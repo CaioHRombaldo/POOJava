@@ -41,6 +41,21 @@ public class Class12 {
         //b.move(); // Flying!
         //b.toFeed(); // Eating Fruits!
         //b.sound(); // Bird Sound!
+        
+        //Kangaroo k = new Kangaroo(55.30f, 3, 4);
+        //Dog d = new Dog(3.93f, 5, 4);
+        
+        //k.move(); // Jumping!
+        //k.toFeed(); // Suckling!
+        //k.sound(); // Mammal Sound!
+        //k.usePurse(); // Using Purse!
+        
+        //d.move(); // Running!
+        //d.toFeed(); // Suckling!
+        //d.sound(); // Mammal Sound!
+        //d.wagTail(); // Wagging Tail!
+        //d.buryBone(); // Burying Bone!
+   
     }
     
 }
