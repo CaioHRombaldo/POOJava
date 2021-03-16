@@ -18,7 +18,13 @@ public class Class13 {
         // TODO code application logic here
         
         //Here we can instantiate our classes and test our methods:
+        //Mammal m = new Mammal();
+        //Wolf w = new Wolf();
         //Dog d = new Dog();
+        
+        //m.makeSound(); // Mammal Sound!
+        //w.makeSound(); // Auuuuuuuuuuu!
+        //d.makeSound(); // Au! Au! Au!
         
         //d.reaction("Take food"); // Shake and Bark!
         //d.reaction("Hello"); // Shake and Bark!
