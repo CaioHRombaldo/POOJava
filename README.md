@@ -17,5 +17,6 @@
   Class 11 - "Inheritances part 2" | In this class we learn a little more about **inheritances** and their types.
   Class 12 - "Polymorphism part 1" | In this class we learned concepts about **polymorphism** (**Override**). 
   Class 13 - "Polymorphism part 2" | In this class we learn a little more about **polymorphism** (**Overload**).
+  Class 14 - "**Final Project** part 1" | In this class we review most of the concepts learned so far and start creating the final project.
 
  
