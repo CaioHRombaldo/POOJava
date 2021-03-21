@@ -68,7 +68,17 @@ public class Video implements VideoActions {
     }
 
     public void setAssessment(int assessment) {
-        this.assessment = assessment;
+        int newAs;
+        
+        newAs = (int) ((this.getAssessment() + assessment)/this.views);
+        
+        if (newAs > 10) {
+            newAs = 10;
+        } else if (newAs < 0) {
+            newAs = 0;
+        }
+        
+        this.assessment = newAs;
     }
 
     public int getViews() {
