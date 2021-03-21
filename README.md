@@ -1,5 +1,5 @@
-# POOJava
- POO classes with java.
+# OOPJava
+ OOP classes with java.
  
  ## Summary
  Class number | Class description
@@ -18,5 +18,6 @@
   Class 12 - "Polymorphism part 1" | In this class we learned concepts about **polymorphism** (**Override**). 
   Class 13 - "Polymorphism part 2" | In this class we learn a little more about **polymorphism** (**Overload**).
   Class 14 - "**Final Project** part 1" | In this class we review most of the concepts learned so far and start creating the final project.
+  Class 15 - "**Final Project** part 2" | In this class we finish the course and finish the project of the final class started in class 14.
 
  
